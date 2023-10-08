@@ -1,0 +1,18 @@
+﻿<head>
+    <title>Friend List</title>
+</head>
+<body>
+    <div class="title">
+        <h1>Your Friends:</h1>
+    </div>
+    <ul>
+        {% for friend in friends %}
+
+        <li>
+            {{friend[0]}}<br>
+        </li>
+        {% endfor %}
+    </ul> 
+</body>
+<a href='/add_friends'>Add Friends</a> <br />
+<a href='/home'>Home</a>

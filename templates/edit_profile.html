@@ -1,0 +1,22 @@
+﻿<head>
+    <title>User Profile</title>
+</head>
+<body>
+    <div class="title">
+        <h1>Edit profile</h1>
+    </div>
+    <form method="post" enctype="multipart/form-data" action="/edit_profile">
+        <label for="first_name">First name: </label>
+        <input type="text" name="first_name" placeholder={{info[0]}} /><br />
+        <label for="last_name">Last name: </label>
+        <input type="text" name="last_name" placeholder={{info[1]}} /><br />
+        <label for="gender">Gender: </label>
+        <input type="text" name="gender" placeholder={{info[5]}} /><br />
+        <label for="hometown">Hometown: </label>
+        <input type="text" name="hometown" placeholder={{info[4]}} /><br />
+        <label for="birth_date">Date of Birth: </label>
+        <input type="date" name="birth_date" placeholder={{info[3]}} /><br />
+        <input type="submit" value="Apply" />
+    </form>
+</body>
+<a href='/home'>Home</a>

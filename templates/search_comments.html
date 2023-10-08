@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<head>
+    <title>Search comments</title>
+</head>
+<body>
+    <form method="post" enctype="multipart/form-data" action="/search_comments">
+        <input type="text" name="comment" placeholder="search comments" required='true' /><br />
+        <input type="submit" value="Search" />
+    </form>
+
+    {% if search %}
+    <h1> Search for : {{search}} </h1>
+    <ul>
+        {% for comment in comments %}
+        <b>User:</b> {{comment[0]}}
+        <b>Number of matches:</b> {{comment[2]}}
+        {% endfor %}
+    </ul>
+    {% endif %}
+
+<a href='/home'>Home</a>
+</body>
+</html>
+

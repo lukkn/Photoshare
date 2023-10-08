@@ -1,0 +1,18 @@
+﻿<head>
+    <title>View Photo</title>
+</head>
+<body>
+    <div class="title">
+        <h1></h1>
+        {% if photo %}
+        {{photo[1]}}<br>
+        <img src='data:image/jpg;base64, {{ base64.b64encode(photo[0]).decode("ascii") }}' />
+
+        <form method="post" enctype="multipart/form-data" action="/tag/{{photo[2]}}">
+            <label for="tags">Add Tags: </label>
+            <input type="text" name="tags" required='false' /><br />
+            <input type="submit" value="Add Tags" />
+        </form>
+        {% endif %}
+</body>
+<a href='/home'>Home</a>

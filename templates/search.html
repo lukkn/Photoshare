@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<head>
+    <title>Search</title>
+</head>
+<body>
+    {% if tags %}
+    <h1> Search for : {{tags}} </h1>
+    {% endif %}
+
+    {% if comment %}
+    <h1> Search for : {{comment}} </h1>
+    {% endif %}
+
+
+    {% if photos %}
+    <ul>
+        {% for photo in photos %}
+
+        <li>
+            {{photo[1]}}<br>
+            <a href='/photo/{{photo[2]}}'><img src='data:image/jpg;base64, {{ base64.b64encode(photo[0]).decode("ascii") }}' /></a>
+        </li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+
+<a href='/browse'>Back to browsing</a> 
+<a href='/home'>Home</a> 
+</body>
+</html>

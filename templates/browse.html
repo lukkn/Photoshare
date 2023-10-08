@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<head>
+    <title>Browse</title>
+</head>
+<body>
+    <h1> Browse Photos: </h1>
+
+    <form method="post" enctype="multipart/form-data" action="/browse">
+        <input type="text" name="tags" placeholder="search all photos by tags" required='true' /><br />
+        <input type="submit" value="Search" />
+    </form>
+
+    <ul>
+        {% for photo in photos %}
+
+        <li>
+            {{photo[1]}} <br>
+            <a href='/photo/{{photo[0]}}'><img src='data:image/jpg;base64, {{ base64.b64encode(photo[2]).decode("ascii") }}' /></a>
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+<a href='/home'>Home</a>
+</html>

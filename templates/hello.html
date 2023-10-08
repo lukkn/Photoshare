@@ -1,0 +1,52 @@
+<!-- author ben lawson (balawson@bu.edu) -->
+<!doctype html>
+{% if message %}
+<h2>{{message}}!</h2>
+{% endif %}
+<title>Photoshare</title>
+{% if name %}
+<h3>Hello {{ name }}!</h3>
+{% endif %}
+
+{% if photos %}
+<h2>Here are your photos</h2>
+<ul>
+    {% for photo in photos %}
+
+    <li>
+        {{photo[2]}}<br>
+        <img src='data:image/jpg;base64, {{ base64.b64encode(photo[0]).decode("ascii") }}' />
+    </li>
+    {% endfor %}
+</ul>
+{% endif %}
+
+{% if message is none %}
+<p>You should <a href='/login'>login!</a></p>
+{% endif %}
+
+
+<ul>
+    <li><a href='/browse'>Browse photos </a> </li>
+    <li><a href='/albums'>View albums</a></li>
+    <li><a href='/search_comments'>Search comments</a></li>
+    <li><a href='/profile'>Profile</a></li>
+    <li><a href='/friends'>Friend list</a></li>
+    <li><a href='/logout'>Logout</a></li>
+    <li><a href='/rec'>You may also like</a></li>
+</ul>
+
+<h2>Top Users: </h2>
+<ol>
+    {% for user in users%}
+    <li> {{user[1]}} <b>    Score: </b>{{user[2]}}</li>
+    {% endfor %}
+</ol>
+
+<h2>Top Tags: </h2>
+<ol>
+    {% for tag in tags%}
+    <li> <a href='/search/{{tag[0]}}' style="text-decoration: none">#{{tag[0]}}</a> <b>    Score: </b>{{tag[1]}}</li>
+    {% endfor %}
+</ol>
+

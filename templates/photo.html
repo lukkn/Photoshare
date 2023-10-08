@@ -1,0 +1,46 @@
+﻿<head>
+    <title>View Photo</title>
+</head>
+<body>
+    <div class="title">
+        <h1></h1>
+        {% if photo %}
+        {{photo[1]}}<b> by </b> {{photo[3]}} <br>
+        <img src='data:image/jpg;base64, {{ base64.b64encode(photo[0]).decode("ascii") }}' />
+
+
+        <form method="post" action="/photo/{{photo[2]}}">
+            <input type="text" placeholder="type comment here" name="comment" />
+            <input type="submit" value="comment" />
+        </form>
+
+        {% if message %}
+        <font color="red">{{message}}</font><br />
+        {% endif %}
+
+        <form action="/like/{{photo[2]}}" method="post">
+            <button name="like" type="submit">Like</button>
+        </form>
+
+
+
+        {% if like %}
+        <a href='/likes/{{photo[2]}}'>{{like}} likes</a>
+        {% endif %}
+
+        {% endif %}
+        <h3>Tags:</h3>
+        {% for tag in tags %}
+        <a href='/search/{{tag[0]}}' style="text-decoration: none">#{{tag[0]}}</a>
+        {% endfor %}
+        <ul>
+            <h3>Comments:</h3>
+            {% for comment in comments %}
+            <li>
+                <h4>User: {{comment[0]}}</h4> {{comment[1]}}<br> Date: {{comment[2]}}
+
+            </li>
+            {% endfor %}
+        </ul>
+</body>
+<a href='/home'>Home</a>

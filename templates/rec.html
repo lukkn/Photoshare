@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<head>
+    <title>Browse</title>
+</head>
+<body>
+    {% if title %}
+    <h2>{{title}} </h2>
+    {% endif %}
+
+    {% if message %}
+    <h2>{{message}}</h2>
+    {% endif %}
+
+    <h3> Your Top Tags:</h3>
+    {% for tag in tags %}
+    #{{tag[0]}} <b> Number of Uses: </b> {{tag[1]}} <br />
+    {% endfor %}
+
+    <ol>
+        {% if photos %}
+        {% for photo in photos %}
+        <li>
+
+            {{photo[1]}}<br>
+            <a href='/photo/{{photo[2]}}'><img src='data:image/jpg;base64, {{ base64.b64encode(photo[0]).decode("ascii") }}' /></a>
+        </li>
+        {% endfor %}
+        {% endif %}
+    </ol>
+</body>
+<a href='/home'>Home</a>
+</html>
+
+
+

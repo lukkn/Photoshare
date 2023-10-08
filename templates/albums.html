@@ -1,0 +1,24 @@
+﻿<head>
+    <title>View Albums</title>
+</head>
+
+<body>
+    <form method="post" enctype="multipart/form-data" action="/albums">
+        <input type="text" name="tags" placeholder="search your photos by tags" required='true' /><br />
+        <input type="submit" value="Search" />
+    </form>
+
+    <div class="title">
+        <h1>Here are your albums:</h1>
+    </div>
+    <ul>
+        {% for album in albums %}
+
+        <li>
+            <a href="/album/<{{album[0]}}>">{{album[0]}}</a><br> Date created: {{album[1]}}
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+<a href='/new_album'>Create album</a> <br />
+<a href='/home'>Home</a>

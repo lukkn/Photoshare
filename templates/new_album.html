@@ -1,0 +1,16 @@
+﻿<head>
+    <title>Create an Album!</title>
+</head>
+<body>
+    <div class="title">
+        <h1>Create a new album</h1>
+    </div>
+    <form method="post" enctype="multipart/form-data" action="/new_album">
+        <label for="caption">Album name: </label>
+        <input type="text" name="album_name" required='true' /><br />
+        <input type="submit" value="Create" />
+    </form>
+</body>
+
+<a href='/albums'>Back to Albums</a> <br />
+<a href='/home'>Home</a>

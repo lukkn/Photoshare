@@ -1,0 +1,21 @@
+﻿<head>
+    <title>See who liked this photo</title>
+</head>
+<body>
+    <div class="title">
+        {% if photo %}
+        {{photo[1]}}<br>
+        <img src='data:image/jpg;base64, {{ base64.b64encode(photo[0]).decode("ascii") }}' />
+        {% endif %}
+
+        <h3>Users who liked this photo:</h3>
+        <ul>
+            {% for like in likes %}
+            <li>
+                {{like[0]}}
+            </li>
+            {% endfor %}
+        </ul>
+</body>
+<a href='/photo/{{photo[2]}}'>Back to Photo</a> <br />
+<a href='/home'>Home</a>

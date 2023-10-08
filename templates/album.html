@@ -1,0 +1,22 @@
+﻿<head>
+    <title>View Photos in Album</title>
+</head>
+<body>
+    <div class="title">
+        {% if album %}
+        <h1>Album: {{album}}</h1>
+        {% endif %}
+        <a href='/delete_album/{{aid}}'>Delete album</a>
+
+        <ul>
+            {% for photo in photos %}
+            <li>
+                {{photo[2]}}<br>
+                <a href='/photo/{{photo[1]}}'><img src='data:image/jpg;base64, {{ base64.b64encode(photo[0]).decode("ascii") }}' /></a>
+            </li>
+            {% endfor %}
+        </ul>
+</body>
+<a href='/upload/{{album}}'>Upload a photo</a> <br />
+<a href='/albums'>Back to all albums</a>  <br />
+<a href='/home'>Home</a>

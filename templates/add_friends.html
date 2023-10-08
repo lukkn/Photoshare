@@ -1,0 +1,40 @@
+﻿<head>
+    <title>Add Friend</title>
+</head>
+<body>
+    {% if message %}
+    <h4><font color="red">{{message}}</font></h4>
+    {% endif %}
+    <form method="post" enctype="multipart/form-data" action="/add_friends">
+        <label for="caption">User ID:</label>
+        <input type="text" name="add_friend" required='true' /><br />
+        <input type="submit" value="Add Friend" />
+    </form>
+
+    <div class="title">
+        <h5>Recommended users: </h5>
+    </div>
+    <ol>
+        {% for rec in recommended %}
+        <br />
+        <li>
+            {{rec[0]}}<br>
+        </li>
+        {% endfor %}
+    </ol>
+
+    <div class="title">
+        <h5>User List: </h5>
+    </div>
+    <ul>
+        {% for user in users %}
+
+        <br />
+        <li>
+            {{user[0]}}<br>
+        </li>
+        {% endfor %}
+    </ul>
+
+</body>
+<a href='/home'>Home</a>
