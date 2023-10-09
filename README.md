@@ -241,6 +241,7 @@ The add tags page requests users to enter tags for the photo that was just uploa
 
 **Figure 14.** Search comments page
 The search comments page requests a string of text that the user wishes to search for amongst all the comments on the site. Once the user clicks the search button, the page will display all users that made comments that match the user’s input EXACTLY, and the number of times each user made that comment:
+
 ![image](https://github.com/lukkn/Photoshare/assets/70594133/1f9c5f0c-ae7c-46e0-b0bb-e0967c3efbaf)
 
 **Figure 15.** Search for comment "Nice!"
