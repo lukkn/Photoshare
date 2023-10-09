@@ -102,11 +102,11 @@ g. Users cannot change their email and password
 **Figure 2.** Default Landing Page
 The default landing page directs users to:
 1. Login
-- Users will be redirected to the login page (4.2.1)
+- Users will be redirected to the [login page](####Login)
 2. Create an account
-- Users will be redirected to the registration page (4.2.2)
+- Users will be redirected to the [registration page](####Register)
 3. Continue as guest
-- Users will be redirected to the browse page (4.5)
+- Users will be redirected to the [browse page](###Browse)
 
 ### Authentication
 #### Login
