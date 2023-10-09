@@ -261,6 +261,7 @@ The photo page displays the photo that was clicked on, along with its caption an
 2. Comment
 - The users will remain on the photo page, and their comment will appear on the page 
 Comments that were made on the photo are also displayed. The number of likes the photo has received is also displayed, and is a clickable link. When clicked, the link will redirect users to the likes page:
+
 ![image](https://github.com/lukkn/Photoshare/assets/70594133/023ee7a0-987f-4fbe-bc94-b8e3d6c153ee)
 
 **Figure 18.** Likes page
