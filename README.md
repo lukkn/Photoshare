@@ -115,9 +115,9 @@ The default landing page directs users to:
 **Figure 3.** Login Page
 The login page requests the user’s email and password, submitting may result in:
 1. Successful login
-- Users will be redirected to the home page (4.4)
+- Users will be redirected to the [home page](#home)
 2. Failure to login
-- Users will be redirected to the login retry page (4.3.1)
+- Users will be redirected to the [login retry page](#login-retry)
 
 #### Register
 ![image](https://github.com/lukkn/Photoshare/assets/70594133/85a37213-3127-44be-ab58-266a406e5f2f)
@@ -125,9 +125,9 @@ The login page requests the user’s email and password, submitting may result i
 **Figure 4.** Registration Page
 The registration page requests the user to input an email and password, submitting may result in two possible scenarios:
 1. An account with the same email already exists
-- The user will be redirected to the registration retry page (4.3.2)
+- The user will be redirected to the [registration retry page](#registration-retry)
 2. No account exists with the current email
-- The user will be redirected to the home page (4.4)
+- The user will be redirected to the [home page](#home)
 
 ### Retry
 #### Login retry
@@ -135,15 +135,15 @@ The registration page requests the user to input an email and password, submitti
 
 **Figure 5.** Login retry page
 1. Try Again
-- The user will be redirected to the login page (4.2.1)
+- The user will be redirected to the [login page](#login)
 2. Make an account
-- The user will be redirected to the registration page (4.2.2)
+- The user will be redirected to the [registration page](#register)
   
 #### Registration retry
 ![image](https://github.com/lukkn/Photoshare/assets/70594133/f14c6c79-df76-4708-a05e-65cdebb8e252)
 
 **Figure 6.** Registration retry page
-The user can reattempt registration user a valid email address. The page offers the same functions as the registration page (4.2.2). If the user clicks login, they will be redirected to the login page (4.2.1).
+The user can reattempt registration user a valid email address. The page offers the same functions as the [registration page](#register). If the user clicks login, they will be redirected to the [login page](#login).
 
 ### Home
 ![image](https://github.com/lukkn/Photoshare/assets/70594133/50ae9685-821b-4a1d-b5fc-41c9be430c53)
@@ -155,19 +155,19 @@ Variations of the home page exists, where the only difference is the message dis
 The welcome message appears at the top of the page, under the optional message if there is any. It displays “Hello {user email}!”
 The following links are available on the home page:
 1. Browse
-- The user will be redirected to the browse page (4.5)
+- The user will be redirected to the [browse page](#browse)
 2. View Albums
-- The user will be redirected to the albums page (4.6.1)
+- The user will be redirected to the [albums page](#view-all-albums)
 3. Search Comments
-- The user will be redirected to the search comments page (4.7.1)
+- The user will be redirected to the [search comments page](#search-comments)
 4. Profile
-- The user will be redirected to the profile page (4.9.1)
+- The user will be redirected to the [profile page](#profile-information)
 5. Friend list
-- The user will be redirected to the friends page (4.10.1)
+- The user will be redirected to the [friends page](#friend-list)
 6. Logout
 - The user will remain on the home page, with the message “Logged out” displayed
 7. You may also like
-- The user will be redirected to the recommendations page (4.11)
+- The user will be redirected to the [recommendations page](#recommendations)
 
 #### Top Users
 The home page displays Top Users, which are ranked by their contribution score, which is calculated as the total amount of photos the user has uploaded plus the total amount of comments the user has made. At most 10 users are displayed at once. The ranking is refreshed along with the page.
@@ -182,9 +182,9 @@ The home page displays Top Tags, which are the most commonly used tags across th
 The browse page displays all photos from the website, in the order of date uploaded. The user can either:
 1. Search all photos by tags
 - The user will need to enter the tags they wish to search by, separated by spaces. For example, the user may type in “small drone,” to which the system will respond by searching for photos with the tags “small” or “drone” or both.
-- After clicking the search button, the user will be redirected to the search tags page (4.7.2)
+- After clicking the search button, the user will be redirected to the [search tags page](#search-tags)
 2. Click on a photo
-- The user will be redirected to a photo page (4.8)
+- The user will be redirected to a [photo page](#photo)
 
 ### Albums
 #### View all albums
@@ -193,11 +193,11 @@ The browse page displays all photos from the website, in the order of date uploa
 **Figure 9.** Albums page
 The view albums page displays all the user’s albums, in ascending order of date of creation. The user may choose:
 1. Search photos by tags
-- The user will be redirected to the search tags page (4.7.2)
+- The user will be redirected to the [search tags page](#search-tags)
 2. Create a new album
-- The user will be redirected to the create album page (4.6.3)
+- The user will be redirected to the [create album page](#create-album)
 3. Home
-- The user will be redirected to the home page (4.4)
+- The user will be redirected to the [home page](#home)
 
 #### View contents of one album
 ![image](https://github.com/lukkn/Photoshare/assets/70594133/de13d344-64a3-4727-ac81-90fb7521fead)
@@ -205,19 +205,19 @@ The view albums page displays all the user’s albums, in ascending order of dat
 **Figure 10.** Album content page
 The album page displays the name of the album currently being view on the top of the page and all photos within the album, along with their captions. The user may choose:
 1. Delete album
-- The album, along with all pictures within the album, will be deleted, and the user wil be redirected to the albums page (4.6.1)
+- The album, along with all pictures within the album, will be deleted, and the user wil be redirected to the [albums page](#view-all-albums)
 2. Upload a photo
-- The user will be redirected to the upload photo page (4.6.4)
+- The user will be redirected to the [upload photo page](#upload-photo-to-album)
 3. Back to all albums
-- The user will be redirected to the albums page (4.6.1)
+- The user will be redirected to the [albums page](#view-all-albums)
 4. Home
-- The user will be redirected to the home page (4.4)
+- The user will be redirected to the [home page](#home)
 
 #### Create Album
 ![image](https://github.com/lukkn/Photoshare/assets/70594133/5b86ba98-d6f6-4106-bd41-10726b7b5df0)
 
 **Figure 11.** Create album page 
-The create album page requests the user enter an album name. The system assumes that users enter a unique album name for each album created. Once the user clicks the create button, the album is created, and the user is redirected to the albums page (4.6.1).
+The create album page requests the user enter an album name. The system assumes that users enter a unique album name for each album created. Once the user clicks the create button, the album is created, and the user is redirected to the [albums page](#view-all-albums).
 
 #### Upload photo to Album
 ![image](https://github.com/lukkn/Photoshare/assets/70594133/442cb516-7f4a-4775-833e-a9f5cc495c30)
@@ -231,9 +231,9 @@ The upload photo page requests the user to choose an image file to upload from t
 **Figure 13.** Add tags page
 The add tags page requests users to enter tags for the photo that was just uploaded. The required format is “#tag1#tag2” with no spaces, where each tag is separated by a hashtag symbol. Tags are not required, but the user may add as many tags as they wish. Once the user clicks the add tags button, the tags will be added to the photo and the user will be redirected to the corresponding photo page
 2. Create new album
-- The user will be redirected to the create album page (4.6.3)
+- The user will be redirected to the [create album page](#create-album)
 3. Home
-- The user will be redirected to the home page (4.4)
+- The user will be redirected to the [home page](#home)
 
 ### Search
 #### Search comments
@@ -255,11 +255,61 @@ The search tags page displays all photos that have at least one tag matching the
 ![image](https://github.com/lukkn/Photoshare/assets/70594133/d80a708a-3a18-46fa-91d6-afd3b75f3886)
 
 **Figure 17.** A photo page
-The photo page displays the photo that was clicked on, along with its caption and the user who uploaded the photo. The page also displays the tags associated with the photo, each tag is a clickable link, and will redirect users to the search tags page (4.7.2) when clicked. Users may choose to:
+The photo page displays the photo that was clicked on, along with its caption and the user who uploaded the photo. The page also displays the tags associated with the photo, each tag is a clickable link, and will redirect users to the [search tags page](#search-tags) when clicked. Users may choose to:
 1. Like
 - The user will remain on the photo page, and the number of likes displayed will increment.
 2. Comment
-- The users will remain on the photo page, and their comment will appear on the page
+- The users will remain on the photo page, and their comment will appear on the page 
+Comments that were made on the photo are also displayed. The number of likes the photo has received is also displayed, and is a clickable link. When clicked, the link will redirect users to the likes page:
+![image](https://github.com/lukkn/Photoshare/assets/70594133/023ee7a0-987f-4fbe-bc94-b8e3d6c153ee)
+
+**Figure 18.** Likes page
+The likes page displays the email addresses of users who liked the corresponding photos.
+
+### Profile
+#### Profile Information
+![image](https://github.com/lukkn/Photoshare/assets/70594133/3fe6e0d6-9f0c-4924-9e2b-8b4c9abe1061)
+
+**Figure 19.** Profile page
+The profile page displays the user’s information, users may click on the edit button which will redirect them to the edit [profile page](#edit-profile)
+
+#### Edit Profile
+![image](https://github.com/lukkn/Photoshare/assets/70594133/9df99721-8a41-41b8-a385-afd02310f5fa)
+
+**Figure 20.** Edit Profile Page
+The edit profile page requests inputs from the users about their info. Inputs are not required for all fields to submit. Once the user clicks the apply button they are redirected to the [profile page](#profile-information) with the changes applied.
+
+
+###Friends
+#### Friend List
+![image](https://github.com/lukkn/Photoshare/assets/70594133/171e45b8-d4bf-4057-aa12-b9f3bf8a9c41)
+
+**Figure 21.** Friends Page
+The friends page displays all the user’s friends. The user may click on “add friends” which will redirect them to the [add friends page](#add-friends)
+
+#### Add Friends
+![image](https://github.com/lukkn/Photoshare/assets/70594133/49dc42f5-5647-4151-aac9-c7bd08428f29)
+
+**Figure 22.** Add friends page
+The add friends page allows users to add new friends. Recommended users are displayed, which are the friends of the user’s friends. The more a user appears in the user’s friends of friends list, the higher they rank on the recommendation. A comprehensive list of all users is also displayed.
+
+
+### Recommendations
+The recommendations page will display recommended photos if the user has used at least five tags:
+![image](https://github.com/lukkn/Photoshare/assets/70594133/bddc39f9-4e4e-4050-a8ab-bedb26318c5e)
+
+**Figure 23.** Recommended photos
+
+If not, the page displays:
+![image](https://github.com/lukkn/Photoshare/assets/70594133/e0649ff7-7efb-497c-842b-6950e133f78b)
+
+**Figure 24.** Not enough tags for recommendation
+
+
+
+
+
+
 
 
 
